@@ -14,3 +14,13 @@ def say_my_name(request):
     name = request.data.get('name', 'anonymous ')
     message = f'Hello {name}'
     return Response(message, status=HTTP_200_OK)
+
+
+@api_view(['GET'])
+def readiness(request):
+    return Response({'message': 'ok'}, status=200)
+
+
+@api_view(['GET'])
+def liveness(request):
+    return Response({'message': 'ok'}, status=200)
