@@ -6,5 +6,5 @@ urlpatterns = [
     path('say_hello/', say_hello),
     path('say_my_name/', say_my_name),
     path('readiness/', readiness),
-    path('healthz/', liveness),
+#     path('healthz/', liveness),
 ]
