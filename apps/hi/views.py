@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK
-
+import time
 
 @api_view(['GET'])
 def say_hello(request):
@@ -23,4 +23,5 @@ def readiness(request):
 
 @api_view(['GET'])
 def liveness(request):
+     time.sleep(15)
     return Response({'message': 'ok'}, status=200)
